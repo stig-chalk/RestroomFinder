@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="213dp"
-        android:layout_height="210dp"
+        android:layout_width="151dp"
+        android:layout_height="149dp"
         android:layout_marginStart="99dp"
         android:layout_marginLeft="99dp"
         android:layout_marginTop="102dp"
@@ -78,8 +78,8 @@
 
     <Button
         android:id="@+id/Option2"
-        android:layout_width="139dp"
-        android:layout_height="48dp"
+        android:layout_width="199dp"
+        android:layout_height="47dp"
         android:layout_marginStart="112dp"
         android:layout_marginLeft="112dp"
         android:layout_marginTop="30dp"
