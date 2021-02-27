@@ -1,0 +1,392 @@
+2020-07-19 at 15:47:26 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-07-19 at 15:47:26 CST TRACE com.Kinghao.service.UserService 65 login - admin login success: Login successfully
+2020-07-28 at 08:38:19 CST TRACE com.Kinghao.controller.UserController 47 regist - login was request
+2020-07-28 at 08:45:01 CST TRACE com.Kinghao.controller.UserController 47 regist - login was request
+2020-07-28 at 08:52:50 CST TRACE com.Kinghao.controller.UserController 47 regist - login was request
+2020-07-28 at 08:54:32 CST TRACE com.Kinghao.controller.UserController 47 regist - login was request
+2020-07-28 at 08:54:32 CST TRACE com.Kinghao.service.UserService 39 regist - For name:2re;Register successfully.
+2020-07-28 at 09:00:46 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-07-28 at 09:00:46 CST TRACE com.Kinghao.service.UserService 65 login - admin login success: Login successfully
+2020-07-28 at 09:00:56 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-07-28 at 09:00:56 CST TRACE com.Kinghao.service.UserService 65 login - admin login success: Login successfully
+2020-07-28 at 09:01:05 CST TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked leaf on page 3
+2020-07-28 at 09:02:55 CST TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked butterfly
+2020-07-31 at 09:55:20 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-07-31 at 09:55:20 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-07 at 12:19:22 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-07 at 12:19:22 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-07 at 12:19:51 CST TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked question on page 4
+2020-08-08 at 13:46:11 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-08 at 13:46:11 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-08 at 13:46:40 CST TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked hh
+2020-08-17 at 17:13:50 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-17 at 17:13:50 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-19 at 18:22:21 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-19 at 18:22:21 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-19 at 18:28:36 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-19 at 18:28:36 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-19 at 18:33:48 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-19 at 18:33:48 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-19 at 18:36:06 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-19 at 18:36:06 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-19 at 18:40:39 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-19 at 18:40:39 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-19 at 18:45:37 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-19 at 18:45:37 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-19 at 18:47:36 CST TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-19 at 18:47:36 CST TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-20 at 20:57:39 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-20 at 20:57:39 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-20 at 20:59:04 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-20 at 20:59:04 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-20 at 20:59:14 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-20 at 20:59:14 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-20 at 21:00:11 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-20 at 21:00:11 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-20 at 21:01:24 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-20 at 21:01:24 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-20 at 21:01:59 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-20 at 21:01:59 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-20 at 21:05:52 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-20 at 21:05:52 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 15:00:41 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 15:00:41 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 15:19:34 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 15:19:34 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 15:23:05 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 15:23:06 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:09:32 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:09:32 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:15:56 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:15:56 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:19:09 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:19:09 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:22:52 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:22:52 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:33:53 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:33:53 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:37:12 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:37:12 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:39:55 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:39:55 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:41:12 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:41:12 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:42:15 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:42:15 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:57:41 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:57:41 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 16:58:23 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 16:58:23 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:30:36 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:30:36 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:32:06 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:32:06 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:32:07 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:32:07 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:32:51 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:32:51 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:32:58 PDT TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked P4
+2020-08-22 at 18:33:02 PDT TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked P4
+2020-08-22 at 18:34:15 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:34:15 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:38:16 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:38:16 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:39:02 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:39:02 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:39:54 PDT TRACE com.Kinghao.controller.UserController 47 regist - login was request
+2020-08-22 at 18:44:39 PDT TRACE com.Kinghao.controller.UserController 47 regist - login was request
+2020-08-22 at 18:44:39 PDT TRACE com.Kinghao.service.UserService 39 regist - For name:yhc;Register successfully.
+2020-08-22 at 18:45:36 PDT TRACE com.Kinghao.controller.UserController 64 login - login was request
+2020-08-22 at 18:45:36 PDT TRACE com.Kinghao.service.UserService 66 login - yhc login success: Login successfully
+2020-08-22 at 18:46:35 PDT TRACE com.Kinghao.service.HotspotService 27 addRecord - yhc clicked P4
+2020-08-22 at 18:52:18 PDT TRACE com.Kinghao.controller.UserController 68 login - login was request
+2020-08-22 at 18:52:18 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 18:53:01 PDT TRACE com.Kinghao.controller.UserController 68 login - login was request
+2020-08-22 at 18:53:01 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-22 at 19:05:28 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-22 at 19:05:28 PDT TRACE com.Kinghao.service.UserService 66 login - yhc login success: Login successfully
+2020-08-26 at 18:57:58 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 18:57:58 PDT TRACE com.Kinghao.service.UserService 66 login - admin login success: Login successfully
+2020-08-26 at 19:32:14 PDT TRACE com.Kinghao.controller.UserController 52 regist - login was request
+2020-08-26 at 19:32:14 PDT TRACE com.Kinghao.service.UserService 39 regist - For name:testuser;Register successfully.
+2020-08-26 at 19:38:42 PDT TRACE com.Kinghao.controller.UserController 52 regist - login was request
+2020-08-26 at 19:38:42 PDT TRACE com.Kinghao.service.UserService 39 regist - For name:abc;Register successfully.
+2020-08-26 at 19:40:38 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 19:42:15 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 19:45:15 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 19:47:20 PDT TRACE com.Kinghao.controller.UserController 52 regist - login was request
+2020-08-26 at 19:47:20 PDT TRACE com.Kinghao.service.UserService 39 regist - For name:newname;Register successfully.
+2020-08-26 at 19:47:40 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 20:06:45 PDT TRACE com.Kinghao.controller.UserController 52 regist - login was request
+2020-08-26 at 20:06:45 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:newadmin;Register successfully.
+2020-08-26 at 20:06:59 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 20:06:59 PDT TRACE com.Kinghao.service.UserService 70 login - newadmin login success: Login successfully
+2020-08-26 at 20:10:06 PDT TRACE com.Kinghao.controller.UserController 52 regist - login was request
+2020-08-26 at 20:10:06 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:admin;Register successfully.
+2020-08-26 at 20:10:36 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 20:10:36 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-08-26 at 20:32:11 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 20:32:11 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-08-26 at 20:36:49 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 20:36:50 PDT TRACE com.Kinghao.service.UserService 67 login - newadmin login failed: Wrong username or password.
+2020-08-26 at 20:37:11 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 20:37:11 PDT TRACE com.Kinghao.service.UserService 70 login - newadmin login success: Login successfully
+2020-08-26 at 20:56:13 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 20:56:13 PDT TRACE com.Kinghao.service.UserService 70 login - abc login success: Login successfully
+2020-08-26 at 21:00:11 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 21:00:11 PDT TRACE com.Kinghao.service.UserService 70 login - abc login success: Login successfully
+2020-08-26 at 21:02:25 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-26 at 21:02:26 PDT TRACE com.Kinghao.service.UserService 70 login - abc login success: Login successfully
+2020-08-28 at 13:47:50 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-28 at 13:47:51 PDT TRACE com.Kinghao.service.UserService 70 login - abc login success: Login successfully
+2020-08-28 at 13:49:42 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 13:50:10 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 13:50:26 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 13:51:13 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 13:53:30 PDT TRACE com.Kinghao.controller.UserController 69 login - login was request
+2020-08-28 at 13:53:30 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-08-28 at 13:54:39 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 13:54:47 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 13:55:27 PDT TRACE com.Kinghao.controller.UserController 52 regist - login was request
+2020-08-28 at 13:55:27 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:user3;Register successfully.
+2020-08-28 at 16:26:56 PDT TRACE com.Kinghao.controller.UserController 56 regist - regist was request
+2020-08-28 at 16:26:57 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:admintest;Register successfully.
+2020-08-28 at 16:27:08 PDT TRACE com.Kinghao.controller.UserController 56 regist - regist was request
+2020-08-28 at 16:27:08 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:newabc;Register successfully.
+2020-08-28 at 16:27:16 PDT TRACE com.Kinghao.controller.UserController 56 regist - regist was request
+2020-08-28 at 16:27:16 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:newabc2;Register successfully.
+2020-08-28 at 16:28:12 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-08-28 at 16:28:12 PDT TRACE com.Kinghao.service.UserService 70 login - newabc login success: Login successfully
+2020-08-28 at 16:28:24 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 16:28:45 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 16:30:14 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-08-28 at 16:33:27 PDT TRACE com.Kinghao.controller.ReadController 49 updateRecord - close book was requested
+2020-08-28 at 16:44:58 PDT TRACE com.Kinghao.controller.UserController 56 regist - regist was request
+2020-08-28 at 16:44:58 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:admintesttest;Register successfully.
+2020-08-28 at 16:45:29 PDT TRACE com.Kinghao.controller.UserController 56 regist - regist was request
+2020-08-28 at 16:45:29 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:abcabc;Register successfully.
+2020-08-28 at 16:45:37 PDT TRACE com.Kinghao.controller.UserController 56 regist - regist was request
+2020-08-28 at 16:45:37 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:abcabc2;Register successfully.
+2020-09-09 at 19:40:21 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-09 at 19:40:22 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-09 at 19:41:51 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-09 at 19:41:52 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-11 at 22:14:04 PDT TRACE com.Kinghao.controller.ReadController 49 updateRecord - close book was requested
+2020-09-11 at 22:15:10 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-11 at 22:15:10 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-11 at 22:17:31 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-11 at 22:17:31 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-11 at 22:27:55 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-11 at 22:27:55 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 15:49:54 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:49:54 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 15:53:14 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:53:16 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:53:18 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:53:18 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:53:52 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:53:53 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:53:56 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:53:56 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:55:07 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:55:55 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:57:56 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 15:57:56 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:02:44 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:02:44 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:02:46 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:03:09 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:03:09 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:03:10 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:03:21 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:03:21 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:03:24 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:04:42 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:04:42 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:05:06 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:05:06 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:20:01 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:20:02 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:24:11 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:24:11 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:24:15 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-09-16 at 16:32:54 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:32:54 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:33:08 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-09-16 at 16:33:47 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:33:48 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:33:51 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-09-16 at 16:50:32 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:50:32 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:50:33 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-09-16 at 16:50:42 PDT TRACE com.Kinghao.controller.ReadController 49 updateRecord - close book was requested
+2020-09-16 at 16:52:08 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:52:08 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:52:10 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-09-16 at 16:52:13 PDT TRACE com.Kinghao.controller.ReadController 49 updateRecord - close book was requested
+2020-09-16 at 16:54:04 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 16:54:05 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 16:54:08 PDT TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-09-16 at 17:03:47 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 17:03:47 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 17:11:41 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 17:11:41 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 17:12:52 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 17:12:52 PDT TRACE com.Kinghao.service.UserService 70 login - admintest login success: Login successfully
+2020-09-16 at 17:15:22 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 17:15:22 PDT TRACE com.Kinghao.service.UserService 70 login - admintest login success: Login successfully
+2020-09-16 at 19:24:57 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 19:24:57 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 19:48:17 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 19:48:17 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 19:52:17 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 19:52:17 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:01:47 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:01:47 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:05:33 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:05:33 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:07:17 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:07:17 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:10:31 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:10:31 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:11:48 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:11:48 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:17:39 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:17:39 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:48:30 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:48:31 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:48:45 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:48:45 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:50:15 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:50:15 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:51:56 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:51:56 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 20:53:21 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 20:53:21 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 21:03:45 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 21:03:46 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 21:06:04 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 21:06:04 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:02:05 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:02:05 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:04:17 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:04:17 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:07:47 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:07:47 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:12:10 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:12:11 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:14:57 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:14:57 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:19:38 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:19:38 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:23:27 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:23:27 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-16 at 23:27:55 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-16 at 23:27:55 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-19 at 18:07:53 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-19 at 18:07:54 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-19 at 18:14:18 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-19 at 18:14:18 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-19 at 19:31:43 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-19 at 19:31:43 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-19 at 20:25:24 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-19 at 20:25:24 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-19 at 20:28:05 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-19 at 20:28:05 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 18:36:38 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 18:36:38 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 18:42:47 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 18:42:47 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 18:49:38 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 18:49:38 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 18:52:15 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 18:52:15 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 19:01:07 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 19:01:07 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 19:02:37 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 19:02:37 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 19:06:41 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 19:06:41 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-20 at 19:42:59 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-20 at 19:42:59 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-22 at 15:19:07 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-22 at 15:19:07 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-22 at 15:21:27 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-22 at 15:21:27 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-22 at 15:34:46 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-22 at 15:34:47 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-22 at 17:21:40 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-22 at 17:21:40 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-23 at 18:21:32 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-23 at 18:21:32 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-23 at 18:24:29 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-23 at 18:24:29 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-09-28 at 22:05:42 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-09-28 at 22:05:42 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-08 at 22:09:59 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-10-08 at 22:10:00 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-08 at 22:13:42 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-10-08 at 22:13:42 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-08 at 22:20:22 PDT TRACE com.Kinghao.controller.UserController 75 login - login was request
+2020-10-08 at 22:20:22 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-08 at 22:44:48 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-08 at 22:44:48 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-08 at 22:49:00 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-08 at 22:49:00 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-08 at 22:49:44 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-08 at 22:49:59 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-08 at 22:50:48 PDT TRACE com.Kinghao.controller.UserController 57 regist - regist was request
+2020-10-08 at 22:50:48 PDT TRACE com.Kinghao.service.UserService 43 regist - For name:001;Register successfully.
+2020-10-08 at 22:51:01 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-08 at 22:51:01 PDT TRACE com.Kinghao.service.UserService 70 login - 001 login success: Login successfully
+2020-10-09 at 22:45:12 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-09 at 22:45:13 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-09 at 22:48:45 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-09 at 22:48:45 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-09 at 23:01:07 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-09 at 23:01:07 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-09 at 23:08:14 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-09 at 23:08:14 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-09 at 23:11:43 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-09 at 23:11:44 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-10-09 at 23:19:38 PDT TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-10-09 at 23:19:38 PDT TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-13 at 21:29:38 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-13 at 21:29:39 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-13 at 21:51:03 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-13 at 21:51:04 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-13 at 21:52:10 PST TRACE com.Kinghao.controller.ReadController 40 addRecord - open book was requested
+2020-11-13 at 21:52:20 PST TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked bee
+2020-11-13 at 21:57:30 PST TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked bee2
+2020-11-13 at 22:22:46 PST TRACE com.Kinghao.service.HotspotService 27 addRecord - admin clicked test
+2020-11-13 at 22:37:28 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-13 at 22:37:29 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-14 at 00:08:48 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-14 at 00:08:48 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-14 at 00:10:04 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-14 at 00:10:04 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-14 at 00:11:37 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-14 at 00:11:38 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-14 at 00:20:38 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-14 at 00:20:39 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-14 at 00:24:46 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-14 at 00:24:46 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-14 at 00:29:16 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-14 at 00:29:17 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-14 at 00:32:21 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-14 at 00:32:21 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-19 at 18:08:56 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-19 at 18:08:57 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-19 at 18:09:57 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-19 at 18:09:57 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2020-11-19 at 18:10:18 PST TRACE com.Kinghao.controller.UserController 76 login - login was request
+2020-11-19 at 18:10:18 PST TRACE com.Kinghao.service.UserService 70 login - admin login success: Login successfully
+2021-02-26 at 17:11:25 PST TRACE com.Kinghao.controller.UserController 48 regist - regist was request
+2021-02-26 at 17:11:25 PST TRACE com.Kinghao.service.UserService 44 regist - For email:test@email.com;Register successfully.
+2021-02-26 at 17:11:47 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-02-26 at 17:17:11 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-02-26 at 17:18:40 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-02-26 at 17:22:40 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-02-26 at 17:22:41 PST TRACE com.Kinghao.service.UserService 71 login - test@email.com login success: Login successfully
+2021-02-26 at 17:30:41 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-02-26 at 17:30:42 PST TRACE com.Kinghao.service.UserService 71 login - test@email.com login success: Login successfully
