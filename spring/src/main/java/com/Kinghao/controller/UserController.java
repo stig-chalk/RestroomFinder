@@ -8,6 +8,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
+import org.apache.ibatis.annotations.Param;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -51,25 +52,27 @@ public class UserController {
 
     /**
      * Login
-     * @param user
+     * @param email
+     * @param password
      * @return Result
      */
     @PostMapping(value = "/login")
     @ApiOperation("Check the login information of the user")
     @ApiImplicitParams({
-            @ApiImplicitParam(name = "username",value = "Username",required = true),
+            @ApiImplicitParam(name = "email",value = "Email",required = true),
             @ApiImplicitParam(name = "password",value = "Password",required = true)
     })
     @ResponseBody
-    public Result login(User user, HttpServletRequest request){
+    public Result login(
+            @Param("email") String email,
+            @Param("password") String password,
+            HttpServletRequest request){
         logger.trace("login was request");
-        Result R1=userService.login(user);
-        if(R1.isSuccess()){
-            user.setPassword("");
-            HttpSession session=request.getSession();
-            session.setAttribute("user",user);
-            R1.setMsg(user.getEmail()+", Hello!");
-        }
+        User user = new User();
+        user.setEmail(email);
+        user.setPassword(password);
+        Result R1=userService.login(user, request);
+
         return R1;
     }
     @PostMapping("/logout")
@@ -77,6 +80,36 @@ public class UserController {
         HttpSession session=request.getSession();
         session.invalidate();
         return "logout";
+    }
+
+    @PostMapping("/setPrefer")
+    @ApiOperation("Update user preference setting")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "busy",value = "Busy",required = true),
+            @ApiImplicitParam(name = "clean",value = "Clean",required = true),
+            @ApiImplicitParam(name = "accessTlt",value = "accessTlt",required = true),
+            @ApiImplicitParam(name = "genInclus",value = "genInclus",required = true),
+            @ApiImplicitParam(name = "paper",value = "Paper",required = true),
+            @ApiImplicitParam(name = "soap",value = "Soap",required = true)
+    })
+    @ResponseBody
+    public Result setPrefer(User updatedPref, HttpServletRequest request) {
+        Result result = new Result();
+        User user = (User) request.getSession().getAttribute("user");
+        if (user != null) {
+            userService.setPrefer(user, updatedPref);
+
+            request.getSession().setAttribute("user", user);
+            System.out.println(user);
+
+            result.setSuccess(true);
+            result.setMsg("Preference updated for user: " + user.getEmail());
+        }
+        else {
+            result.setSuccess(false);
+            result.setMsg("Permission denied, please login before setting preferences");
+        }
+        return result;
     }
 
 

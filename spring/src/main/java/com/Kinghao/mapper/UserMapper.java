@@ -30,6 +30,15 @@ public interface UserMapper {
     @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
     void regist(User user);
 
+    @Insert("insert into User_Prefer values(#{id}, #{clean}, #{busy}, #{accessTlt}, #{paper}, #{soap}, #{genInclus})")
+    @Options(useGeneratedKeys = true,keyProperty = "id",keyColumn = "id")
+    void insertPrefRecord(User user);
+
+    @Update("update User_Prefer " +
+            "set clean=#{clean}, busy=#{busy}, accessTlt=#{accessTlt}, paper=#{paper}, soap=#{soap}, genInclus=#{genInclus} " +
+            "where id=#{id}")
+    void updatePrefRecord(User user);
+
     /**
      * Login
      * @param user
@@ -38,5 +47,6 @@ public interface UserMapper {
     @Select("select * from Users as u where u.email = #{email}")
     User login(User user);
 
-
+    @Select("select * from User_Prefer where id=#{id}")
+    User getUserPref(User user);
 }

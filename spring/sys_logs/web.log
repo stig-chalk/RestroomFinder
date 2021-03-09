@@ -390,3 +390,50 @@
 2021-02-26 at 17:22:41 PST TRACE com.Kinghao.service.UserService 71 login - test@email.com login success: Login successfully
 2021-02-26 at 17:30:41 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
 2021-02-26 at 17:30:42 PST TRACE com.Kinghao.service.UserService 71 login - test@email.com login success: Login successfully
+2021-02-26 at 19:50:43 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-02-26 at 19:50:44 PST TRACE com.Kinghao.service.UserService 71 login - test@email.com login success: Login successfully
+2021-03-02 at 21:53:10 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-02 at 21:53:11 PST TRACE com.Kinghao.service.UserService 72 login - test@email.com login success: Login successfully
+2021-03-02 at 21:53:48 PST TRACE com.Kinghao.controller.UserController 48 regist - regist was request
+2021-03-02 at 21:55:29 PST TRACE com.Kinghao.controller.UserController 48 regist - regist was request
+2021-03-02 at 21:55:29 PST TRACE com.Kinghao.service.UserService 45 regist - For email:yhc@email.com;Register successfully.
+2021-03-02 at 21:56:00 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-02 at 21:56:01 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-02 at 21:58:46 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-02 at 21:58:46 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-02 at 22:00:57 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-02 at 22:00:57 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:20:19 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:20:20 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:21:05 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:21:05 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:23:00 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:23:00 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:35:51 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:35:52 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:38:17 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:38:17 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:40:08 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:40:08 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:44:15 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:44:16 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:45:35 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:45:35 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:54:20 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:54:20 PST TRACE com.Kinghao.service.UserService 73 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:55:18 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:55:19 PST TRACE com.Kinghao.service.UserService 73 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:55:25 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:55:25 PST TRACE com.Kinghao.service.UserService 73 login - yhc@email.com login success: Login successfully
+2021-03-03 at 18:59:33 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 18:59:34 PST TRACE com.Kinghao.service.UserService 72 login - yhc@email.com login success: Login successfully
+2021-03-03 at 19:04:52 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-03 at 19:04:52 PST TRACE com.Kinghao.service.UserService 76 login - yhc@email.com login success: Login successfully
+2021-03-04 at 22:46:42 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-04 at 22:46:43 PST TRACE com.Kinghao.service.UserService 76 login - yhc@email.com login success: Login successfully
+2021-03-04 at 22:53:31 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-04 at 22:53:31 PST TRACE com.Kinghao.service.UserService 76 login - yhc@email.com login success: Login successfully
+2021-03-04 at 22:56:28 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-04 at 22:56:29 PST TRACE com.Kinghao.service.UserService 76 login - yhc@email.com login success: Login successfully
+2021-03-04 at 23:08:39 PST TRACE com.Kinghao.controller.UserController 65 login - login was request
+2021-03-04 at 23:08:39 PST TRACE com.Kinghao.service.UserService 76 login - yhc@email.com login success: Login successfully

@@ -21,3 +21,17 @@ CREATE TABLE User_Prefer (
   PRIMARY KEY  (id),
   FOREIGN KEY (id) REFERENCES Users(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS Restrooms;
+CREATE TABLE Restrooms (
+  id varchar(255) NOT NULL ,
+  clean double NOT NULL default 0,
+  busy double NOT NULL default 0,
+  rating double NOT NULL default 0,
+  userTotalRatings int not NULL default 0,
+  accessTlt bool NOT NULL default false,
+  paper bool NOT NULL default false,
+  soap bool NOT NULL default false,
+  genInclus bool NOT NULL default false,
+  PRIMARY KEY  (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -8,8 +8,12 @@ import org.apache.logging.log4j.Logger;
 import org.jasypt.util.password.PasswordEncryptor;
 import org.jasypt.util.password.StrongPasswordEncryptor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 @Service
 @Transactional(rollbackFor = RuntimeException.class)
@@ -39,7 +43,8 @@ public class UserService {
                 PasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
                 user.setPassword(passwordEncryptor.encryptPassword(user.getPassword()));
                 userMapper.regist(user);
-                //System.out.println(user.getId());
+                userMapper.insertPrefRecord(user);
+                System.out.println(user.getId());
                 result.setMsg("Register successfully.");
                 logger.trace("For email:"+user.getEmail()+";"+result.getMsg());
                 result.setSuccess(true);
@@ -56,7 +61,7 @@ public class UserService {
      * @param user
      * @return Result
      */
-    public Result login(User user) {
+    public Result login(User user, HttpServletRequest request) {
         Result result = new Result();
         result.setSuccess(false);
         result.setDetail(null);
@@ -68,15 +73,31 @@ public class UserService {
                 logger.trace(user.getEmail()+" login failed: "+result.getMsg());
             }else{
                 result.setMsg("Login successfully");
-                logger.trace(user.getEmail()+" login success: "+result.getMsg());
+                logger.trace(fullUserInfo.getEmail()+" login success: "+result.getMsg());
+                user = userMapper.getUserPref(fullUserInfo);
+                user.setEmail(fullUserInfo.getEmail());
+
                 result.setSuccess(true);
-                user.setId(fullUserInfo.getId());
                 result.setDetail(user);
+                HttpSession session=request.getSession();
+                session.setAttribute("user",user);
+                result.setMsg(user.getEmail()+", Hello!");
             }
         } catch (Exception e) {
             result.setMsg(e.getMessage());
             e.printStackTrace();
         }
         return result;
+    }
+
+
+    public void setPrefer(User user, User updatedPref) {
+        user.setAccessTlt(updatedPref.getAccessTlt());
+        user.setBusy(updatedPref.getBusy());
+        user.setClean(updatedPref.getClean());
+        user.setGenInclus(updatedPref.getGenInclus());
+        user.setPaper(updatedPref.getPaper());
+        user.setSoap(updatedPref.getSoap());
+        userMapper.updatePrefRecord(user);
     }
 }
