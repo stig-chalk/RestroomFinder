@@ -62,16 +62,22 @@ public class UserService {
      * @return Result
      */
     public Result login(User user, HttpServletRequest request) {
+        System.out.println(user.getEmail());
+        System.out.println(user.getPassword());
         Result result = new Result();
         result.setSuccess(false);
         result.setDetail(null);
         try {
             User fullUserInfo = userMapper.login(user);
-            Boolean passMatch = new StrongPasswordEncryptor().checkPassword(user.getPassword(), fullUserInfo.getPassword());
+            boolean passMatch = false;
+            if (fullUserInfo != null)
+                passMatch = new StrongPasswordEncryptor().checkPassword(user.getPassword(), fullUserInfo.getPassword());
+
             if(!passMatch){
                 result.setMsg("Wrong username or password.");
                 logger.trace(user.getEmail()+" login failed: "+result.getMsg());
-            }else{
+            }
+            else{
                 result.setMsg("Login successfully");
                 logger.trace(fullUserInfo.getEmail()+" login success: "+result.getMsg());
                 user = userMapper.getUserPref(fullUserInfo);

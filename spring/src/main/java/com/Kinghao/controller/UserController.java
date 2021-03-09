@@ -50,12 +50,7 @@ public class UserController {
         return userService.regist(user);
     }
 
-    /**
-     * Login
-     * @param email
-     * @param password
-     * @return Result
-     */
+
     @PostMapping(value = "/login")
     @ApiOperation("Check the login information of the user")
     @ApiImplicitParams({
@@ -64,8 +59,8 @@ public class UserController {
     })
     @ResponseBody
     public Result login(
-            @Param("email") String email,
-            @Param("password") String password,
+            @RequestParam("email") String email,
+            @RequestParam("password") String password,
             HttpServletRequest request){
         logger.trace("login was request");
         User user = new User();
