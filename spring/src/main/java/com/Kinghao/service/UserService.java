@@ -62,8 +62,6 @@ public class UserService {
      * @return Result
      */
     public Result login(User user, HttpServletRequest request) {
-        System.out.println(user.getEmail());
-        System.out.println(user.getPassword());
         Result result = new Result();
         result.setSuccess(false);
         result.setDetail(null);
