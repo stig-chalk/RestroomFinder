@@ -26,23 +26,13 @@ public class MainActivity extends AppCompatActivity {
         JumpYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(checkLogin()){
-                    openRecommendationPage();
-                }
-                else{
-                    openLoginPage();
-                }
+                openLoginPage();
             }
         });
-
     }
+
     public void openLoginPage() {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
-    public void openRecommendationPage() {
-        Intent intent = new Intent(this, LoginActivity.class);
-        startActivity(intent);
-    }
-
 }
