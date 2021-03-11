@@ -53,7 +53,7 @@ public class RefrenceActivity extends AppCompatActivity {
     public void submit() {
         final RequestQueue queue = NetworkManager.sharedManager(this).queue;
 
-        String url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/user/regist";
+        String url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/user/setPrefer";
 
         String accessTlt = String.valueOf((int)rating_accessTlt.getRating());
         String busy = String.valueOf((int)rating_busy.getRating());
