@@ -26,13 +26,17 @@ public class MainActivity extends AppCompatActivity {
         JumpYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openLoginPage();
+                openSearchPage();
             }
         });
     }
 
     public void openLoginPage() {
         Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+    }
+    public void openSearchPage() {
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
     }
 }

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/name_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="Name"
+        android:textSize="45dp"
+        android:gravity="center"/>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="100dp">
+
+        <TextView
+            android:paddingRight="15dp"
+            android:id="@+id/busy_gallery"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Busy:"
+            android:textSize="35sp" />
+
+        <RatingBar
+            android:id="@+id/rating_busy_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:numStars="5"
+            android:outlineAmbientShadowColor="#FFFFFF"
+            android:paddingTop="15dp"
+            android:progressTint="#FFC107"
+            android:stepSize="1"
+            android:isIndicator="true"/>
+    </TableRow>
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="100dp">
+
+            <TextView
+                android:paddingRight="15dp"
+                android:id="@+id/clean_gallery"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Clean:"
+                android:textSize="35sp" />
+
+            <RatingBar
+                android:id="@+id/rating_ckean_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:numStars="5"
+                android:outlineAmbientShadowColor="#FFFFFF"
+                android:paddingTop="15dp"
+                android:progressTint="#FFC107"
+                android:stepSize="1"
+                android:isIndicator="true"/>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Accessible Toilet"
+            android:textSize="20dp"
+            android:checked="true"
+            android:id="@+id/check_at"
+            ></androidx.appcompat.widget.AppCompatCheckBox>
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Gender Inclusive"
+            android:textSize="20dp"
+            android:checked="true"
+            android:id="@+id/check_gi"
+
+            ></androidx.appcompat.widget.AppCompatCheckBox>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Paper"
+            android:textSize="20dp"
+            android:checked="true"
+            android:id="@+id/check_paper"
+            ></androidx.appcompat.widget.AppCompatCheckBox>
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Soap"
+            android:textSize="20dp"
+            android:checked="true"
+            android:id="@+id/check_soap"
+            ></androidx.appcompat.widget.AppCompatCheckBox>
+    </LinearLayout>
+</LinearLayout>
