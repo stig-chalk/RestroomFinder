@@ -39,6 +39,8 @@ public class SearchActivity extends AppCompatActivity {
          ArrayList<Boolean> genInclus;
          ArrayList<Boolean> soap;
          ArrayList<Boolean> paper;
+         ArrayList<Float> busy;
+         ArrayList<Float> clean;
 
         public Restroom(){
             mRanks = new ArrayList<String>();
@@ -49,6 +51,20 @@ public class SearchActivity extends AppCompatActivity {
             genInclus = new ArrayList<Boolean>();
             soap= new ArrayList<Boolean>();
             paper= new ArrayList<Boolean>();
+            busy = new ArrayList<Float>();
+            clean = new ArrayList<Float>();
+        }
+        public Restroom(Restroom restroom) {
+            mRanks = restroom.mRanks;
+            mNames = restroom.mNames;
+            mAddresses = restroom.mAddresses;
+            mRatings = restroom.mRatings;
+            accessTlt = restroom.accessTlt;
+            genInclus = restroom.genInclus;
+            soap = restroom.soap;
+            paper = restroom.paper;
+            clean = restroom.clean;
+            busy = restroom.busy;
         }
     }
     Restroom restroom = new Restroom();
@@ -76,19 +92,24 @@ public class SearchActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             JSONArray jsonArray = response.getJSONArray("detail");
+                            System.out.println(response);
                             for(int i=0; i<jsonArray.length(); i++) {
-                                System.out.println(response);
-
                                 restroom.mRanks.add(jsonArray.getJSONObject(i).getString("name").substring(0,1));
                                 restroom.mNames.add(jsonArray.getJSONObject(i).getString("name"));
                                 restroom.mAddresses.add(jsonArray.getJSONObject(i).getString("addr"));
                                 restroom.mRatings.add(jsonArray.getJSONObject(i).getString("rating").substring(0,3));
-
-
+                                restroom.accessTlt.add(jsonArray.getJSONObject(i).getBoolean("accessTlt"));
+                                restroom.genInclus.add(jsonArray.getJSONObject(i).getBoolean("genInclus"));
+                                restroom.soap.add(jsonArray.getJSONObject(i).getBoolean("soap"));
+                                restroom.paper.add(jsonArray.getJSONObject(i).getBoolean("paper"));
+                                restroom.clean.add((float)jsonArray.getJSONObject(i).getDouble("clean"));
+                                restroom.busy.add((float)jsonArray.getJSONObject(i).getDouble("busy"));
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
+                        System.out.println(restroom.clean);
+                        System.out.println(restroom.paper);
                         initRecyclerView();
 
                     }

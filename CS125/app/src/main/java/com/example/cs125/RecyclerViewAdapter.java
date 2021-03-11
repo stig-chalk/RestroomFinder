@@ -18,16 +18,14 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>{
     private SearchActivity.Restroom mRestroom = new SearchActivity.Restroom();
     private Context mContext;
 
     public RecyclerViewAdapter(Context context, SearchActivity.Restroom restroom) {
-        mRestroom.mRanks= restroom.mRanks;
-        mRestroom.mNames = restroom.mNames;
-        mRestroom.mAddresses = restroom.mAddresses;
-        mRestroom.mRatings = restroom.mRatings;
+        mRestroom = new SearchActivity.Restroom(restroom);
         mContext = context;
     }
 
@@ -39,15 +37,39 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     @Override
-    public void onBindViewHolder(ViewHolder holder, int position) {
+    public void onBindViewHolder(ViewHolder holder, final int position) {
         holder.rank.setText(mRestroom.mRanks.get(position));
         holder.name.setText(mRestroom.mNames.get(position));
         holder.address.setText(mRestroom.mAddresses.get(position));
         holder.rating.setText(mRestroom.mRatings.get(position));
+
+
+        final int red= ThreadLocalRandom.current().nextInt(155,250);
+        final int green=ThreadLocalRandom.current().nextInt(155,250);
+        final int blue=ThreadLocalRandom.current().nextInt(155,250);
+
+        GradientDrawable draw = new GradientDrawable();
+        draw.setShape(GradientDrawable.OVAL);
+        draw.setColor(Color.rgb(red,green,blue));
+        holder.rank.setBackground(draw);
+
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Intent intent = new Intent(mContext, GalleryActivity.class);
 
+                intent.putExtra("name", mRestroom.mNames.get(position));
+                intent.putExtra("addr", mRestroom.mAddresses.get(position));
+                intent.putExtra("busy", mRestroom.busy.get(position));
+                intent.putExtra("clean", mRestroom.clean.get(position));
+                intent.putExtra("accessTlt", mRestroom.accessTlt.get(position));
+                intent.putExtra("genInclus", mRestroom.genInclus.get(position));
+                intent.putExtra("soap", mRestroom.soap.get(position));
+                intent.putExtra("paper", mRestroom.paper.get(position));
+                intent.putExtra("red", red);
+                intent.putExtra("green", green);
+                intent.putExtra("blue", blue);
+                mContext.startActivity(intent);
             }
         });
     }
@@ -67,15 +89,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         public ViewHolder(View itemView) {
             super(itemView);
-            Random r = new Random();
-            int red=r.nextInt(253 - 0 + 1)+0;
-            int green=r.nextInt(253 - 0 + 1)+0;
-            int blue=r.nextInt(253 - 0 + 1)+0;
-
-            GradientDrawable draw = new GradientDrawable();
-            draw.setShape(GradientDrawable.OVAL);
-            draw.setColor(Color.rgb(red,green,blue));
-
 
             rank = itemView.findViewById(R.id.rank);
             name = itemView.findViewById(R.id.name);
@@ -83,7 +96,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             rating = itemView.findViewById(R.id.rating);
             parentLayout = itemView.findViewById(R.id.parent_layout);
 
-            rank.setBackground(draw);
+
         }
     }
 }
