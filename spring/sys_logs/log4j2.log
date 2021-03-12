@@ -1,0 +1,2 @@
+23:08:39.128 TRACE com.Kinghao.controller.UserController 65 login - login was request
+23:08:39.314 TRACE com.Kinghao.service.UserService 76 login - yhc@email.com login success: Login successfully

@@ -1,0 +1,20 @@
+
+[[_definitions]]
+== Definitions
+
+[[_result]]
+=== Result
+
+[options="header", cols=".^3,.^4"]
+|===
+|Name|Schema
+|**detail** +
+__optional__|object
+|**msg** +
+__optional__|string
+|**success** +
+__optional__|boolean
+|===
+
+
+

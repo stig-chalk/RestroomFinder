@@ -1,5 +1,6 @@
 package com.example.cs125;
 
+
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
@@ -18,13 +19,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -36,6 +37,7 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
     private LocationManager locationManager;
     String user_location;
     String destination;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -117,6 +119,7 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         System.out.println("5"+paper);
         System.out.println("6"+soap);
 
+
         destination = addr;
 
     }
@@ -162,5 +165,6 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
             e.printStackTrace();
         }
     }
+
 }
 
