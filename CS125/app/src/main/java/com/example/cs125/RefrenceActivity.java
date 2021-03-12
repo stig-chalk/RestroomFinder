@@ -76,7 +76,7 @@ public class RefrenceActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
 
-                            Intent intent = new Intent(RefrenceActivity.this, GalleryActivity.class);
+                            Intent intent = new Intent(RefrenceActivity.this, SearchActivity.class);
                             String success = response.getString("success");
                             if (success.equals("true")){
                                 String msg = response.getString("msg");
