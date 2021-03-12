@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="busy_level">
+        <item>Very Free</item>
+        <item>Free</item>
+        <item>Normal</item>
+        <item>Slightly Busy</item>
+        <item>Busy</item>
+        <item>Very Busy</item>
+    </string-array>
+</resources>

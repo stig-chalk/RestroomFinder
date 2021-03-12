@@ -75,10 +75,14 @@ public class RefrenceActivity extends AppCompatActivity {
                     @Override
                     public void onResponse(JSONObject response) {
                         try {
+
+                            Intent intent = new Intent(RefrenceActivity.this, GalleryActivity.class);
                             String success = response.getString("success");
                             if (success.equals("true")){
                                 String msg = response.getString("msg");
+                                intent.putExtra("weighted",true);
                                 Toast.makeText(RefrenceActivity.this,msg, Toast.LENGTH_SHORT).show();
+                                startActivity(intent);
                             }
                             else{
                                 String msg = response.getString("msg");

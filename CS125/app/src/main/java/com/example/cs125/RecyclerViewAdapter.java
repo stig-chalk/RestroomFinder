@@ -42,6 +42,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.name.setText(mRestroom.mNames.get(position));
         holder.address.setText(mRestroom.mAddresses.get(position));
         holder.rating.setText(mRestroom.mRatings.get(position));
+        holder.distance.setText(String.valueOf(mRestroom.distance.get(position))+" miles");
 
 
         final int red= ThreadLocalRandom.current().nextInt(155,250);
@@ -69,6 +70,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("red", red);
                 intent.putExtra("green", green);
                 intent.putExtra("blue", blue);
+                intent.putExtra("id", mRestroom.id.get(position));
+                intent.putExtra("distance", mRestroom.distance.get(position));
                 mContext.startActivity(intent);
             }
         });
@@ -83,6 +86,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView rank;
         TextView name;
         TextView address;
+        TextView distance;
         TextView rating;
 
         LinearLayout parentLayout;
@@ -94,7 +98,9 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             name = itemView.findViewById(R.id.name);
             address = itemView.findViewById(R.id.address);
             rating = itemView.findViewById(R.id.rating);
+            distance = itemView.findViewById(R.id.distance);
             parentLayout = itemView.findViewById(R.id.parent_layout);
+
 
 
         }

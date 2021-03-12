@@ -35,12 +35,9 @@ import java.util.concurrent.TimeUnit;
 
 public class SearchActivity extends AppCompatActivity  implements LocationListener {
     private LocationManager locationManager;
-    private ArrayList<String> mRanks = new ArrayList<String>();
-    private ArrayList<String> mNames = new ArrayList<String>();
-    private ArrayList<String> mAddresses= new ArrayList<String>();
-    private ArrayList<String> mRatings= new ArrayList<String>();
-    String lat;
-    String lon;
+    Double lat;
+    Double lon;
+    Boolean weighted;
     static class Restroom{
          ArrayList<String> mRanks;
          ArrayList<String> mNames;
@@ -52,6 +49,8 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
          ArrayList<Boolean> paper;
          ArrayList<Float> busy;
          ArrayList<Float> clean;
+         ArrayList<String> id;
+         ArrayList<Double> distance;
 
         public Restroom(){
             mRanks = new ArrayList<String>();
@@ -64,6 +63,8 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
             paper= new ArrayList<Boolean>();
             busy = new ArrayList<Float>();
             clean = new ArrayList<Float>();
+            id = new ArrayList<String>();
+            distance = new ArrayList<Double>();
         }
         public Restroom(Restroom restroom) {
             mRanks = restroom.mRanks;
@@ -76,6 +77,8 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
             paper = restroom.paper;
             clean = restroom.clean;
             busy = restroom.busy;
+            id = restroom.id;
+            distance = restroom.distance;
         }
     }
     Restroom restroom = new Restroom();
@@ -93,27 +96,44 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
         getLocation();
     }
 
+    private void getIncomingIntent(){
+        weighted = getIntent().getBooleanExtra("weighted",false);
+    }
+
     private void initRecyclerView(){
         RecyclerView recyclerView = findViewById(R.id.recycleView);
-
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, restroom);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
+        adapter.notifyDataSetChanged();
     }
 
     @Override
     public void onLocationChanged(Location location){
-        lat = String.valueOf(location.getLatitude());
-        lon = String.valueOf(location.getLongitude());
+        getIncomingIntent();
+
+        lat = location.getLatitude();
+        lon = location.getLongitude();
+
+        String slat = String.valueOf(lat);
+        String slon = String.valueOf(lon);
 
         final RequestQueue queue = NetworkManager.sharedManager(this).queue;
 
-        String url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/unweighted;";
+        String url = "";
+        if (weighted){
+            url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/weighted;";}
+        else{
+            url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/unweighted;";}
 
         Uri.Builder builder = Uri.parse(url).buildUpon();
-        builder.appendQueryParameter("lat", lat);
-        builder.appendQueryParameter("lon", lon);
+        builder.appendQueryParameter("lat", slat);
+        builder.appendQueryParameter("lon", slon);
+        if (weighted){
+            builder.appendQueryParameter("radius", "10");}
+
+
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, builder.toString(), null,
                 new Response.Listener<JSONObject>() {
@@ -133,12 +153,15 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
                                 restroom.paper.add(jsonArray.getJSONObject(i).getBoolean("paper"));
                                 restroom.clean.add((float)jsonArray.getJSONObject(i).getDouble("clean"));
                                 restroom.busy.add((float)jsonArray.getJSONObject(i).getDouble("busy"));
+                                restroom.id.add(jsonArray.getJSONObject(i).getString("id"));
+
+                                Double distance = getDistance(lat,lon,jsonArray.getJSONObject(i).getDouble("lat"), jsonArray.getJSONObject(i).getDouble("lon"));
+
+                                restroom.distance.add(Math.round(distance*100.0)/(100.0));
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-                        System.out.println(restroom.clean);
-                        System.out.println(restroom.paper);
                         initRecyclerView();
 
                     }
@@ -167,5 +190,18 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
             e.printStackTrace();
         }
     }
-
+    private double getDistance(double lat1, double lon1, double lat2, double lon2) {
+        double theta = lon1 - lon2;
+        double dist = Math.sin(deg2rad(lat1)) * Math.sin(deg2rad(lat2)) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.cos(deg2rad(theta));
+        dist = Math.acos(dist);
+        dist = rad2deg(dist);
+        dist = dist * 60 * 1.1515;
+        return (dist);
+    }
+    private double deg2rad(double deg) {
+        return (deg * Math.PI / 180.0);
+    }
+    private double rad2deg(double rad) {
+        return (rad * 180.0 / Math.PI);
+    }
 }

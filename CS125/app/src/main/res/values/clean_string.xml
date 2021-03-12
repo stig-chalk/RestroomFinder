@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clean_level">
+        <item>Very Dirty</item>
+        <item>Dirty</item>
+        <item>Slightly Dirty</item>
+        <item>Normal</item>
+        <item>Clean</item>
+        <item>Very Clean</item>
+    </string-array>
+</resources>
