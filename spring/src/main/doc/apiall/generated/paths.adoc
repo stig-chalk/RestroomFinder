@@ -1,0 +1,404 @@
+
+[[_paths]]
+== Paths
+
+[[_addrecordusingpost]]
+=== Add the clicking event of the hotspot
+....
+POST /hotspot/addRecord
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**clickResult** +
+__optional__|Record the answer(if there is one)|string
+|**Query**|**clickTime.date** +
+__optional__||integer (int32)
+|**Query**|**clickTime.day** +
+__optional__||integer (int32)
+|**Query**|**clickTime.hours** +
+__optional__||integer (int32)
+|**Query**|**clickTime.minutes** +
+__optional__||integer (int32)
+|**Query**|**clickTime.month** +
+__optional__||integer (int32)
+|**Query**|**clickTime.nanos** +
+__optional__||integer (int32)
+|**Query**|**clickTime.seconds** +
+__optional__||integer (int32)
+|**Query**|**clickTime.time** +
+__optional__||integer (int64)
+|**Query**|**clickTime.timezoneOffset** +
+__optional__||integer (int32)
+|**Query**|**clickTime.year** +
+__optional__||integer (int32)
+|**Query**|**hotspotName** +
+__required__|Name of the hotspot|string
+|**Query**|**hotspotType** +
+__required__|Type: quotes, vocabulary, multiple_choice, open_ended_discussion, replay_button, next_button, back_button|string
+|**Query**|**id** +
+__optional__||integer (int64)
+|**Query**|**readBookId** +
+__optional__||integer (int32)
+|**Query**|**remarks** +
+__optional__|Extra remark of the clicking event(if there is one)|string
+|**Query**|**username** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* Hotspot Controller
+
+
+[[_updaterecordusingget]]
+=== close a book
+....
+GET /read/closeBook
+....
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* Read a book
+
+
+[[_addrecordusingget]]
+=== new readBook record
+....
+GET /read/openBook
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**bookId** +
+__required__|Open book id|string
+|**Query**|**closetime.date** +
+__optional__||integer (int32)
+|**Query**|**closetime.day** +
+__optional__||integer (int32)
+|**Query**|**closetime.hours** +
+__optional__||integer (int32)
+|**Query**|**closetime.minutes** +
+__optional__||integer (int32)
+|**Query**|**closetime.month** +
+__optional__||integer (int32)
+|**Query**|**closetime.nanos** +
+__optional__||integer (int32)
+|**Query**|**closetime.seconds** +
+__optional__||integer (int32)
+|**Query**|**closetime.time** +
+__optional__||integer (int64)
+|**Query**|**closetime.timezoneOffset** +
+__optional__||integer (int32)
+|**Query**|**closetime.year** +
+__optional__||integer (int32)
+|**Query**|**id** +
+__optional__||integer (int32)
+|**Query**|**opentime.date** +
+__optional__||integer (int32)
+|**Query**|**opentime.day** +
+__optional__||integer (int32)
+|**Query**|**opentime.hours** +
+__optional__||integer (int32)
+|**Query**|**opentime.minutes** +
+__optional__||integer (int32)
+|**Query**|**opentime.month** +
+__optional__||integer (int32)
+|**Query**|**opentime.nanos** +
+__optional__||integer (int32)
+|**Query**|**opentime.seconds** +
+__optional__||integer (int32)
+|**Query**|**opentime.time** +
+__optional__||integer (int64)
+|**Query**|**opentime.timezoneOffset** +
+__optional__||integer (int32)
+|**Query**|**opentime.year** +
+__optional__||integer (int32)
+|**Query**|**username** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* Read a book
+
+
+[[_addrecordusingpost_1]]
+=== new unlock
+....
+POST /unlock/addUnlock
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**bookId** +
+__required__|New Unlocked bookId|string
+|**Query**|**id** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.date** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.day** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.hours** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.minutes** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.month** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.nanos** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.seconds** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.time** +
+__optional__||integer (int64)
+|**Query**|**unlockTime.timezoneOffset** +
+__optional__||integer (int32)
+|**Query**|**unlockTime.year** +
+__optional__||integer (int32)
+|**Query**|**username** +
+__optional__||string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|No Content
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* Unlock a new book
+
+
+[[_loginusingpost]]
+=== Check the login information of the user
+....
+POST /user/login
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**bookPointer** +
+__optional__||integer (int32)
+|**Query**|**id** +
+__optional__||integer (int64)
+|**Query**|**password** +
+__required__|Password|string
+|**Query**|**userType** +
+__optional__||integer (int32)
+|**Query**|**username** +
+__required__|Username|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* User Controller
+
+
+[[_logoutusingpost]]
+=== logout
+....
+POST /user/logout
+....
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|string
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* User Controller
+
+
+[[_registusingpost]]
+=== Add a user
+....
+POST /user/regist
+....
+
+
+==== Parameters
+
+[options="header", cols=".^2,.^3,.^9,.^4"]
+|===
+|Type|Name|Description|Schema
+|**Query**|**bookPointer** +
+__optional__||integer (int32)
+|**Query**|**id** +
+__optional__||integer (int64)
+|**Query**|**password** +
+__required__|Password–Length up to 255|string
+|**Query**|**userType** +
+__required__|Use numbers 1-6 to indicate the user type|string
+|**Query**|**username** +
+__required__|Username–Length up to 255|string
+|===
+
+
+==== Responses
+
+[options="header", cols=".^2,.^14,.^4"]
+|===
+|HTTP Code|Description|Schema
+|**200**|OK|<<_result,Result>>
+|**201**|Created|No Content
+|**401**|Unauthorized|No Content
+|**403**|Forbidden|No Content
+|**404**|Not Found|No Content
+|===
+
+
+==== Consumes
+
+* `application/json`
+
+
+==== Produces
+
+* `*/*`
+
+
+==== Tags
+
+* User Controller
+
+
+
