@@ -1,11 +1,23 @@
 package com.example.cs125;
 
+
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.CheckBox;
-import android.widget.ImageView;
+
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -13,12 +25,25 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-public class GalleryActivity extends AppCompatActivity {
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Locale;
+
+public class GalleryActivity extends AppCompatActivity implements LocationListener{
+    private LocationManager locationManager;
+    String user_location;
+    String destination;
+
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         getIncomingIntent();
+
     }
 
     private void getIncomingIntent(){
@@ -92,8 +117,53 @@ public class GalleryActivity extends AppCompatActivity {
         System.out.println("4"+genInclus);
         System.out.println("5"+paper);
         System.out.println("6"+soap);
+
+
+        destination = addr;
+        DisplayTrack();
     }
 
+    @Override
+    public void onLocationChanged(Location location){
+        user_location = String.valueOf(location.getLatitude()) + "," + String.valueOf(location.getLongitude());
+        System.out.println(user_location);
+        try {
+            Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + user_location + "/" + destination);
+            System.out.println(uri);
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            intent.setPackage("com.google.android.apps.maps");
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+
+        }catch (ActivityNotFoundException e){
+            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+        }
+
+    }
+
+    private void DisplayTrack(){
+        if (ContextCompat.checkSelfPermission(GalleryActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+        != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(GalleryActivity.this,new String[]{
+                    Manifest.permission.ACCESS_FINE_LOCATION
+            },100);
+        }
+        getLocation();
+    }
+
+    @SuppressLint("MissingPermission")
+    private void getLocation(){
+        try {
+            locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000,5, GalleryActivity.this);
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 
 }
 
