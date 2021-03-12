@@ -1,10 +1,20 @@
 package com.example.cs125;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -23,13 +33,14 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
-public class SearchActivity extends AppCompatActivity {
-
+public class SearchActivity extends AppCompatActivity  implements LocationListener {
+    private LocationManager locationManager;
     private ArrayList<String> mRanks = new ArrayList<String>();
     private ArrayList<String> mNames = new ArrayList<String>();
     private ArrayList<String> mAddresses= new ArrayList<String>();
     private ArrayList<String> mRatings= new ArrayList<String>();
-
+    String lat;
+    String lon;
     static class Restroom{
          ArrayList<String> mRanks;
          ArrayList<String> mNames;
@@ -73,18 +84,36 @@ public class SearchActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
-        initContext();
+        if (ContextCompat.checkSelfPermission(SearchActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(SearchActivity.this,new String[]{
+                    Manifest.permission.ACCESS_FINE_LOCATION
+            },100);
+        }
+        getLocation();
     }
 
-    private void initContext(){
+    private void initRecyclerView(){
+        RecyclerView recyclerView = findViewById(R.id.recycleView);
+
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, restroom);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
+    }
+
+    @Override
+    public void onLocationChanged(Location location){
+        lat = String.valueOf(location.getLatitude());
+        lon = String.valueOf(location.getLongitude());
+
         final RequestQueue queue = NetworkManager.sharedManager(this).queue;
 
         String url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/unweighted;";
 
         Uri.Builder builder = Uri.parse(url).buildUpon();
-        builder.appendQueryParameter("lat", String.valueOf(122));
-        builder.appendQueryParameter("lon", String.valueOf(133));
+        builder.appendQueryParameter("lat", lat);
+        builder.appendQueryParameter("lon", lon);
 
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, builder.toString(), null,
                 new Response.Listener<JSONObject>() {
@@ -127,15 +156,16 @@ public class SearchActivity extends AppCompatActivity {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
-    private void initRecyclerView(){
-        RecyclerView recyclerView = findViewById(R.id.recycleView);
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(this, restroom);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.addItemDecoration(new DividerItemDecoration(recyclerView.getContext(), DividerItemDecoration.VERTICAL));
-
+    @SuppressLint("MissingPermission")
+    private void getLocation(){
+        try {
+            locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
+            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,5000,5, SearchActivity.this);
+        } catch (Exception e){
+            e.printStackTrace();
+        }
     }
+
 }

@@ -16,8 +16,9 @@ import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
-
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -43,7 +44,7 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery);
         getIncomingIntent();
-
+        DisplayTrack();
     }
 
     private void getIncomingIntent(){
@@ -120,7 +121,7 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
 
 
         destination = addr;
-        DisplayTrack();
+
     }
 
     @Override
