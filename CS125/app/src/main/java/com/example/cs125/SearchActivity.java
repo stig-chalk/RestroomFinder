@@ -131,7 +131,7 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
         builder.appendQueryParameter("lat", slat);
         builder.appendQueryParameter("lon", slon);
         if (weighted){
-            builder.appendQueryParameter("radius", "10");}
+            builder.appendQueryParameter("radius", "2000");}
 
 
 
