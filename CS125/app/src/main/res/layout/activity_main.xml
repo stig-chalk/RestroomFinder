@@ -53,15 +53,16 @@
 
     <Button
         android:id="@+id/JumpNo"
-        android:layout_width="wrap_content"
+        android:layout_width="350"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="168dp"
+        android:layout_marginEnd="32dp"
         android:layout_marginBottom="5dp"
-        android:background="@drawable/button_biankuang"
+        android:background="@drawable/button_biankuang_black"
         android:text="Sign Up"
         android:textAllCaps="false"
-        android:textSize="10dp"
+        android:textColor="#ffffff"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/JumpYes" />
