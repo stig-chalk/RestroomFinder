@@ -3,23 +3,23 @@
     package="com.example.cs125">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        android:networkSecurityConfig="@xml/network_security_config">
-        <activity android:name=".RefrenceActivity"></activity>
+        android:theme="@style/AppTheme">
+        <activity android:name=".SearchActivity"></activity>
+        <activity android:name=".GalleryActivity"></activity>
+        <activity android:name=".RefrenceActivity" />
         <activity android:name=".SignUpActivity" />
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" />
-        <activity
-            android:name=".ui.login.LoginPage"
-            android:label="@string/title_activity_login_page" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>
