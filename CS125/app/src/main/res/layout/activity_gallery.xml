@@ -124,7 +124,7 @@
                 android:paddingTop="15dp"
                 android:theme="@style/RatingBar"
                 android:stepSize="0.5"
-                android:rating="3.3"
+                android:rating="0"
                 />
         </TableRow>
     </TableLayout>
