@@ -6,11 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:id="@+id/layout_gallery">
+    android:id="@+id/layout_rating">
 
     <TextView
         android:layout_marginLeft="5dp"
-        android:id="@+id/name_gallery"
+        android:id="@+id/name_rating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/alfa_slab_one"
@@ -22,26 +22,16 @@
     <TextView
         android:layout_marginLeft="5dp"
         android:padding="10dp"
-        android:id="@+id/addr_gallery"
+        android:id="@+id/addr_rating"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Addr"
         android:textSize="10dp"
         android:gravity="left"/>
-
-    <TextView
-        android:layout_marginLeft="5dp"
-        android:padding="10dp"
-        android:id="@+id/distance_gallery"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Distance"
-        android:textSize="10dp"
-        android:gravity="left"/>
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:paddingTop="0dp"
         >
 
         <TableRow
@@ -51,8 +41,8 @@
             android:paddingTop="15dp">
 
             <TextView
-                android:id="@+id/busy_gallery"
-                android:layout_width="60dp"
+                android:id="@+id/busy_rating"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/baloo"
                 android:gravity="center"
@@ -60,16 +50,13 @@
                 android:text="Busy:"
                 android:textSize="15sp" />
 
-            <TextView
+            <Spinner
                 android:layout_marginLeft="100dp"
-                android:id="@+id/rating_busy_gallery"
+                android:id="@+id/rating_busy_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:fontFamily="@font/baloo"
-                android:gravity="center"
-                android:text="Busy"
-                android:textColor="#3A3737"
-                android:textSize="20sp"/>
+                android:entries="@array/busy_level"
+                android:layout_gravity="center"/>
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
@@ -78,8 +65,8 @@
             android:paddingTop="15dp">
 
             <TextView
-                android:id="@+id/clean_gallery"
-                android:layout_width="60dp"
+                android:id="@+id/clean_rating"
+                android:layout_width="50dp"
                 android:layout_height="match_parent"
                 android:fontFamily="@font/baloo"
                 android:gravity="center"
@@ -87,17 +74,13 @@
                 android:text="Clean:"
                 android:textSize="15sp" />
 
-            <TextView
-                android:id="@+id/rating_clean_gallery"
+            <Spinner
+                android:layout_marginLeft="100dp"
+                android:id="@+id/rating_clean_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="100dp"
-
-                android:fontFamily="@font/baloo"
-                android:gravity="center"
-                android:text="Busy"
-                android:textColor="#3A3737"
-                android:textSize="20sp" />
+                android:entries="@array/clean_level"
+                android:layout_gravity="center"/>
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
@@ -115,79 +98,28 @@
 
             <RatingBar
                 android:layout_marginLeft="100dp"
-                android:id="@+id/rating_gallery"
+                android:id="@+id/rating_rating"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:isIndicator="true"
+                android:isIndicator="false"
                 android:numStars="5"
                 android:outlineAmbientShadowColor="#FFFFFF"
                 android:paddingTop="15dp"
                 android:theme="@style/RatingBar"
                 android:stepSize="0.5"
-                android:rating="0"
+                android:rating="0.0"
                 />
         </TableRow>
     </TableLayout>
-    <LinearLayout
-        android:layout_marginTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-        <LinearLayout
-            android:layout_marginLeft="70dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/button_direction"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/button_shadow"
-                android:src="@drawable/ic_menu_directions"
-
-                ></ImageButton>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Direction"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                >
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginLeft="100dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageButton
-                android:id="@+id/button_rate"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:background="@drawable/button_shadow"
-                android:src="@drawable/btn_star_mtrl_alpha"
-
-                ></ImageButton>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rate It"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                >
-            </TextView>
-        </LinearLayout>
-    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@drawable/checkbox_bg"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:padding="20dp">
+        android:padding="30dp">
         <LinearLayout
 
             android:layout_width="match_parent"
@@ -195,7 +127,7 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/check_at"
+                android:id="@+id/rating_check_at"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:checked="true"
@@ -204,7 +136,7 @@
                 android:textSize="10dp"></androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/check_gi"
+                android:id="@+id/rating_check_gi"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -221,27 +153,36 @@
             android:orientation="horizontal">
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/check_paper"
+                android:id="@+id/rating_check_paper"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-
                 android:checked="true"
                 android:fontFamily="@font/anton"
                 android:text="Paper"
                 android:textSize="10dp"></androidx.appcompat.widget.AppCompatCheckBox>
 
             <androidx.appcompat.widget.AppCompatCheckBox
-                android:id="@+id/check_soap"
+                android:id="@+id/rating_check_soap"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-
                 android:checked="true"
                 android:fontFamily="@font/anton"
                 android:text="Soap"
                 android:textSize="10dp"></androidx.appcompat.widget.AppCompatCheckBox>
         </LinearLayout>
     </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_rating"
+        android:text="SUBMIT"
+        android:background="@drawable/submit_bg"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"></Button>
+
 
 
 </LinearLayout>

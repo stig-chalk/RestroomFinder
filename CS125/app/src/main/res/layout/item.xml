@@ -20,12 +20,12 @@
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="normal"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="0dp"/>
 
     <LinearLayout
         android:layout_marginLeft="25dp"
-        android:layout_width="280dp"
+        android:layout_width="260dp"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
@@ -47,20 +47,34 @@
             />
 
     </LinearLayout>
-
-    <TextView
-        android:paddingRight="5dp"
-        android:paddingTop="10dp"
-        android:id="@+id/rating"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="60dp"
+        android:orientation="vertical">
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
         android:fontFamily="@font/audiowide"
         android:text="4.5"
         android:textColor="#FFC107"
         android:textSize="20dp"
         android:textStyle="italic"
-        android:layout_gravity="center"
-/>
+        android:layout_gravity="left"
+        android:gravity="left"/>
 
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/baloo"
+            android:text="55555 miles"
+            android:textColor="#292929"
+            android:textSize="8dp"
+            android:textStyle="normal" />
 
+    </LinearLayout>
 </LinearLayout>

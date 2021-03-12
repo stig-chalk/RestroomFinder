@@ -19,6 +19,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -37,14 +38,26 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
     private LocationManager locationManager;
     String user_location;
     String destination;
+    String[] busy_level ={"Very Free", "Free", "Normal","Slightly Busy", "Busy", "Very Busy", };
+    String[] clean_level ={"Very Dirty", "Dirty", "Slightly Dirty", "Normal", "Clean", "Very Clean"};
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_gallery);
         getIncomingIntent();
-        DisplayTrack();
+
+        ImageButton button_direction = findViewById(R.id.button_direction);
+
+
+        button_direction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DisplayTrack();
+            }
+        });
     }
 
     private void getIncomingIntent(){
@@ -60,19 +73,24 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         Integer red = getIntent().getIntExtra("red",155);
         Integer green = getIntent().getIntExtra("green",155);
         Integer blue = getIntent().getIntExtra("blue",155);
+        String id = getIntent().getStringExtra("id");
+        double distance = getIntent().getDoubleExtra("distance",0);
+        setUpView(name, addr, busy, clean, accessTlt, genInclus, soap, paper,red ,green, blue,distance, id);
 
-        setUpView(name, addr, busy, clean, accessTlt, genInclus, soap, paper,red ,green, blue);
+
     }
 
-    private void setUpView(String name,
-                           String addr,
+    private void setUpView(final String name,
+                           final String addr,
                            Float busy,
                            Float clean,
                            Boolean accessTlt,
                            Boolean genInclus,
                            Boolean soap,
                            Boolean paper,
-                           Integer red, Integer green, Integer blue){
+                           final Integer red, final Integer green, final Integer blue,
+                           Double distance,
+                           final String id){
 
         GradientDrawable drawable = new GradientDrawable(
                 GradientDrawable.Orientation.BOTTOM_TOP, new int[] {Color.rgb(255,255,255), Color.rgb(red,green,blue)
@@ -88,13 +106,15 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         TextView a = findViewById(R.id.addr_gallery);
         a.setText(addr);
 
-        RatingBar star_busy = findViewById(R.id.rating_busy_gallery);
-        star_busy.setRating(busy);
-        star_busy.setIsIndicator(true);
+        TextView d = findViewById(R.id.distance_gallery);
+        d.setText(distance+ " miles");
 
-        RatingBar star_clean = findViewById(R.id.rating_clean_gallery);
-        star_clean.setRating(clean);
-        star_clean.setIsIndicator(true);
+        TextView star_busy = findViewById(R.id.rating_busy_gallery);
+        star_busy.setText(busy_level[Math.round(busy)]);
+
+        TextView star_clean = findViewById(R.id.rating_clean_gallery);
+        star_clean.setText(clean_level[Math.round(clean)]);
+
 
         CheckBox check_at = findViewById(R.id.check_at);
         check_at.setChecked(accessTlt);
@@ -111,14 +131,29 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         CheckBox check_paper = findViewById(R.id.check_paper);
         check_paper.setChecked(paper);
         check_paper.setClickable(false);
+//
+//        System.out.println("1"+busy);
+//        System.out.println("2"+clean);
+//        System.out.println("3"+accessTlt);
+//        System.out.println("4"+genInclus);
+//        System.out.println("5"+paper);
+//        System.out.println("6"+soap);
+        ImageButton button_rate = findViewById(R.id.button_rate);
+        button_rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(GalleryActivity.this, RatingActivity.class);
+                intent.putExtra("name", name);
+                intent.putExtra("addr", addr);
+                intent.putExtra("id", id);
+                intent.putExtra("red", red);
+                intent.putExtra("green", green);
+                intent.putExtra("blue", blue);
 
-        System.out.println("1"+busy);
-        System.out.println("2"+clean);
-        System.out.println("3"+accessTlt);
-        System.out.println("4"+genInclus);
-        System.out.println("5"+paper);
-        System.out.println("6"+soap);
 
+                startActivity(intent);
+            }
+        });
 
         destination = addr;
 
@@ -154,6 +189,7 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         }
         getLocation();
     }
+
 
     @SuppressLint("MissingPermission")
     private void getLocation(){
