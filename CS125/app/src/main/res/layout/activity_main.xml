@@ -53,7 +53,7 @@
 
     <Button
         android:id="@+id/JumpNo"
-        android:layout_width="350"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="32dp"
