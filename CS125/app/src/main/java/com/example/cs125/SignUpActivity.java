@@ -98,6 +98,8 @@ public class SignUpActivity extends AppCompatActivity {
                             if (success.equals("true")){
                                 Intent intent = new Intent(SignUpActivity.this, PrefrenceActivity.class);
                                 startActivity(intent);
+//                                if sign up success then auto login
+                                Login();
                             }
                             else{
                                 String msg = response.getString("msg");
@@ -122,6 +124,35 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
+        queue.add(request);
+    }
+
+    public void Login() {
+        final RequestQueue queue = NetworkManager.sharedManager(this).queue;
+
+        String url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/user/login";
+
+//      Create parameter for url
+        Uri.Builder builder = Uri.parse(url).buildUpon();
+        builder.appendQueryParameter("email", Email);
+        builder.appendQueryParameter("password", Password);
+
+
+//      Using POST request to get Json, don't have the correct email and password if tag success is not true
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, builder.toString(), null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        Intent intent = new Intent(SignUpActivity.this, SearchActivity.class);
+                        startActivity(intent);
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                Log.d("Sign up.error", error.toString());
+            }
+        });
         queue.add(request);
     }
 

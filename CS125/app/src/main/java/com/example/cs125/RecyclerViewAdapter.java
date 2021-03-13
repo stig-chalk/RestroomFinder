@@ -63,6 +63,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                 intent.putExtra("addr", mRestroom.mAddresses.get(position));
                 intent.putExtra("busy", mRestroom.busy.get(position));
                 intent.putExtra("clean", mRestroom.clean.get(position));
+                intent.putExtra("rating", mRestroom.mRatings.get(position));
                 intent.putExtra("accessTlt", mRestroom.accessTlt.get(position));
                 intent.putExtra("genInclus", mRestroom.genInclus.get(position));
                 intent.putExtra("soap", mRestroom.soap.get(position));
@@ -100,8 +101,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             rating = itemView.findViewById(R.id.rating);
             distance = itemView.findViewById(R.id.distance);
             parentLayout = itemView.findViewById(R.id.parent_layout);
-
-
 
         }
     }
