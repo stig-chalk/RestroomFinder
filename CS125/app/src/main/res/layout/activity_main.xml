@@ -10,15 +10,15 @@
 
     <TextView
         android:id="@+id/textView1"
+        style="@style/AudioFileInfoOverlayText"
         android:layout_width="347dp"
         android:layout_height="40dp"
         android:layout_marginTop="420dp"
         android:fontFamily="@font/archivo_black"
         android:gravity="center"
         android:text="@string/in_a_rush"
-        style="@style/AudioFileInfoOverlayText"
+        android:textColor="#FF9800"
         android:textSize="27dp"
-
         app:layout_constraintBottom_toTopOf="@id/textView2"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -60,7 +60,7 @@
         android:layout_marginBottom="5dp"
         android:background="@drawable/button_biankuang_black"
 
-        android:text="Not Really"
+        android:text="Not really, show me the recommendations"
 
         android:textAllCaps="false"
         android:textColor="#ffffff"
