@@ -16,6 +16,7 @@ import jp.wasabeef.blurry.Blurry;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +37,6 @@ public class MainActivity extends AppCompatActivity {
                 openSearchPage();
             }
         });
-
 
         ViewGroup rootView = (ViewGroup) decorView.findViewById(android.R.id.content);
         Blurry.with(this)
