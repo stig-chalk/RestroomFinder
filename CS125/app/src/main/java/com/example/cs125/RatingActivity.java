@@ -149,7 +149,7 @@ public class RatingActivity extends AppCompatActivity {
         final RequestQueue queue = NetworkManager.sharedManager(this).queue;
         String url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/feedback/add";
         Uri.Builder builder = Uri.parse(url).buildUpon();
-
+//        set parameter for url
         builder.appendQueryParameter("accessTlt", accessTlt);
         builder.appendQueryParameter("busy", sbusy);
         builder.appendQueryParameter("clean", sclean);
@@ -167,10 +167,12 @@ public class RatingActivity extends AppCompatActivity {
                     public void onResponse(JSONObject response) {
                         try {
                             String success = response.getString("success");
+//                            if will get the success massage if "success" is true
                             if (success.equals("true")){
                                 String msg = response.getString("msg");
                                 Toast.makeText(RatingActivity.this,msg, Toast.LENGTH_SHORT).show();
                             }
+//                            otherwise it will show the error massage
                             else{
                                 String msg = response.getString("msg");
                                 Log.d("SUBMIT.error", msg);

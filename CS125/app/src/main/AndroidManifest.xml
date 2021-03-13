@@ -16,7 +16,7 @@
         <activity android:name=".RatingActivity"></activity>
         <activity android:name=".SearchActivity" />
         <activity android:name=".GalleryActivity" />
-        <activity android:name=".RefrenceActivity" />
+        <activity android:name=".PrefrenceActivity" />
         <activity android:name=".SignUpActivity" />
         <activity
             android:name=".LoginActivity"

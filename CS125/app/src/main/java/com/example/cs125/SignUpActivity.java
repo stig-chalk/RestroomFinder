@@ -3,7 +3,6 @@ package com.example.cs125;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -40,6 +39,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Email = EmailInput.getText().toString().trim();
+//                check email address and password correctness
                 if (!isUserNameValid(Email)){
                     Toast.makeText(SignUpActivity.this,"Email address is invalid. Try again.", Toast.LENGTH_SHORT).show();
                     return;
@@ -83,10 +83,12 @@ public class SignUpActivity extends AppCompatActivity {
 
         String url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/user/regist";
 
+//      Create parameter for url
         Uri.Builder builder = Uri.parse(url).buildUpon();
         builder.appendQueryParameter("email", email);
         builder.appendQueryParameter("password", password);
 
+        //      Using POST request to get Json, have the same email if tag success is not true
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, builder.toString(), null,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -94,7 +96,7 @@ public class SignUpActivity extends AppCompatActivity {
                         try {
                             String success = response.getString("success");
                             if (success.equals("true")){
-                                Intent intent = new Intent(SignUpActivity.this, RefrenceActivity.class);
+                                Intent intent = new Intent(SignUpActivity.this, PrefrenceActivity.class);
                                 startActivity(intent);
                             }
                             else{
