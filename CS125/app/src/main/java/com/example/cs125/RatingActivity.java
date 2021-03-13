@@ -2,6 +2,7 @@ package com.example.cs125;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
@@ -171,6 +172,9 @@ public class RatingActivity extends AppCompatActivity {
                             if (success.equals("true")){
                                 String msg = response.getString("msg");
                                 Toast.makeText(RatingActivity.this,msg, Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(RatingActivity.this, SearchActivity.class);
+                                intent.putExtra("weighted",true);
+                                startActivity(intent);
                             }
 //                            otherwise it will show the error massage
                             else{

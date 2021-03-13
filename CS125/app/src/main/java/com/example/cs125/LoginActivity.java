@@ -81,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
                             String success = response.getString("success");
                             if (success.equals("true")){
                                 Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
+                                intent.putExtra("weighted",true);
                                 startActivity(intent);
                             }
                             else{
