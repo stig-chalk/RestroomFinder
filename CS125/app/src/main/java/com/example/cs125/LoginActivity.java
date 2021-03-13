@@ -81,11 +81,14 @@ public class LoginActivity extends AppCompatActivity {
                             String success = response.getString("success");
                             if (success.equals("true")){
                                 Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
+                                intent.putExtra("weighted",true);
                                 startActivity(intent);
                             }
                             else{
 //                                it will show the error massage if "success" not true
                                 String msg = response.getString("msg");
+                                loadingProgressBar = findViewById(R.id.loading);
+                                loadingProgressBar.setVisibility(View.INVISIBLE);
                                 Toast.makeText(LoginActivity.this,msg, Toast.LENGTH_SHORT).show();
                                 passwordEditText.setText("");
                                 usernameEditText.setText("");
