@@ -96,8 +96,6 @@ public class SignUpActivity extends AppCompatActivity {
                         try {
                             String success = response.getString("success");
                             if (success.equals("true")){
-                                Intent intent = new Intent(SignUpActivity.this, PrefrenceActivity.class);
-                                startActivity(intent);
 //                                if sign up success then auto login
                                 Login();
                             }
