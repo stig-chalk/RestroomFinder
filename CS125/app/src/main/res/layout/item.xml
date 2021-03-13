@@ -3,30 +3,30 @@
     android:id="@+id/parent_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginLeft="0dp"
     android:background="@drawable/item_bg"
     android:orientation="horizontal"
     android:paddingTop="10dp"
-    android:paddingBottom="5dp"
-    >
+    android:paddingBottom="5dp">
 
     <TextView
-        android:layout_gravity="center"
-        android:gravity="center"
         android:id="@+id/rank"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="0dp"
         android:fontFamily="@font/audiowide"
+        android:gravity="center"
         android:text="#1"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        android:textStyle="normal"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="0dp"/>
+        android:textStyle="normal" />
 
     <LinearLayout
-        android:layout_marginLeft="25dp"
-        android:layout_width="260dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -36,41 +36,46 @@
             android:text="Name"
             android:textColor="#676060"
             android:textSize="15dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="address"
             android:textColor="#676060"
-            android:textSize="10dp"
-            />
+            android:textSize="10dp" />
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="80dp"
         android:layout_height="60dp"
-        android:orientation="vertical">
-    <TextView
-        android:id="@+id/rating"
-        android:layout_width="60dp"
-        android:layout_height="20dp"
-        android:fontFamily="@font/audiowide"
-        android:text="4.5"
-        android:textColor="#FFC107"
-        android:textSize="20dp"
-        android:textStyle="italic"
-        android:layout_gravity="left"
-        android:gravity="left"/>
+        android:orientation="vertical"
+        android:layout_marginLeft="0dp">
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:layout_height="20dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/audiowide"
+
+            android:text="4.5"
+            android:textColor="#FFC107"
+            android:textSize="18dp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/distance"
-            android:layout_width="60dp"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="left"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="15dp"
             android:fontFamily="@font/baloo"
+
             android:text="55555 miles"
             android:textColor="#292929"
             android:textSize="8dp"
