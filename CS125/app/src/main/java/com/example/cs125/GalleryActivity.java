@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -53,11 +54,12 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
     }
 
     private void getIncomingIntent(){
-
         String name = getIntent().getStringExtra("name");
         String addr = getIntent().getStringExtra("addr");
         float busy = getIntent().getFloatExtra("busy",0);
         float clean = getIntent().getFloatExtra("clean",0);
+        String rating = getIntent().getStringExtra("rating");
+        System.out.println("abd: "+rating);
         boolean accessTlt = getIntent().getBooleanExtra("accessTlt",true);
         boolean genInclus = getIntent().getBooleanExtra("genInclus",true);
         boolean soap = getIntent().getBooleanExtra("soap",true);
@@ -67,15 +69,14 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         Integer blue = getIntent().getIntExtra("blue",155);
         String id = getIntent().getStringExtra("id");
         double distance = getIntent().getDoubleExtra("distance",0);
-        setUpView(name, addr, busy, clean, accessTlt, genInclus, soap, paper,red ,green, blue,distance, id);
-
-
+        setUpView(name, addr, busy, clean, rating, accessTlt, genInclus, soap, paper,red ,green, blue,distance, id);
     }
 
     private void setUpView(final String name,
                            final String addr,
                            Float busy,
                            Float clean,
+                           String rating,
                            Boolean accessTlt,
                            Boolean genInclus,
                            Boolean soap,
@@ -108,6 +109,9 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         TextView star_clean = findViewById(R.id.rating_clean_gallery);
         star_clean.setText(clean_level[Math.round(clean)]);
 
+        RatingBar star_rating = findViewById(R.id.rating_gallery);
+        star_rating.setRating(Float.parseFloat(rating));
+        star_rating.setClickable(false);
 
         CheckBox check_at = findViewById(R.id.check_at);
         check_at.setChecked(accessTlt);
@@ -136,7 +140,6 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
                 intent.putExtra("red", red);
                 intent.putExtra("green", green);
                 intent.putExtra("blue", blue);
-
 
                 startActivity(intent);
             }
