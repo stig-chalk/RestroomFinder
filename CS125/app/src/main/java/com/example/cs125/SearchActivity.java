@@ -123,9 +123,9 @@ public class SearchActivity extends AppCompatActivity  implements LocationListen
 
         String url = "";
         if (weighted){
-            url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/weighted;";}
+            url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/weighted";}
         else{
-            url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/unweighted;";}
+            url = "http://ec2-100-24-72-207.compute-1.amazonaws.com:8080/search/unweighted";}
 
         Uri.Builder builder = Uri.parse(url).buildUpon();
         builder.appendQueryParameter("lat", slat);

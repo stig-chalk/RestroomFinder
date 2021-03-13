@@ -87,6 +87,8 @@ public class LoginActivity extends AppCompatActivity {
                             else{
 //                                it will show the error massage if "success" not true
                                 String msg = response.getString("msg");
+                                loadingProgressBar = findViewById(R.id.loading);
+                                loadingProgressBar.setVisibility(View.INVISIBLE);
                                 Toast.makeText(LoginActivity.this,msg, Toast.LENGTH_SHORT).show();
                                 passwordEditText.setText("");
                                 usernameEditText.setText("");

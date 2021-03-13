@@ -141,7 +141,7 @@ public class SignUpActivity extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        Intent intent = new Intent(SignUpActivity.this, SearchActivity.class);
+                        Intent intent = new Intent(SignUpActivity.this, PrefrenceActivity.class);
                         startActivity(intent);
                     }
                 }, new Response.ErrorListener() {
