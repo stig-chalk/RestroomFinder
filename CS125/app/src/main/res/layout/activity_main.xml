@@ -59,7 +59,9 @@
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="5dp"
         android:background="@drawable/button_biankuang_black"
-        android:text="Sign Up"
+
+        android:text="Not Really"
+
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="12dp"

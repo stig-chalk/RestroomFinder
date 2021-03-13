@@ -95,7 +95,8 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         GradientDrawable drawable = new GradientDrawable(
                 GradientDrawable.Orientation.BOTTOM_TOP, new int[] {Color.rgb(255,255,255), Color.rgb(red,green,blue)
         });
-
+//        get the value of each factor
+//        we already sort them by some factors in the backend so we only need to display them with the same order
         drawable.setAlpha(75);
         LinearLayout layout = findViewById(R.id.layout_gallery);
         layout.setBackground(drawable);
@@ -131,13 +132,7 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
         CheckBox check_paper = findViewById(R.id.check_paper);
         check_paper.setChecked(paper);
         check_paper.setClickable(false);
-//
-//        System.out.println("1"+busy);
-//        System.out.println("2"+clean);
-//        System.out.println("3"+accessTlt);
-//        System.out.println("4"+genInclus);
-//        System.out.println("5"+paper);
-//        System.out.println("6"+soap);
+
         ImageButton button_rate = findViewById(R.id.button_rate);
         button_rate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,8 +156,10 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
 
     @Override
     public void onLocationChanged(Location location){
+//        get current user Latitude and Longitude and combine as a String, use it later in the url
         user_location = String.valueOf(location.getLatitude()) + "," + String.valueOf(location.getLongitude());
-        System.out.println(user_location);
+
+//        if will jump to the google map if user have one and show the navigation
         try {
             Uri uri = Uri.parse("https://www.google.co.in/maps/dir/" + user_location + "/" + destination);
             System.out.println(uri);
@@ -172,15 +169,16 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
             startActivity(intent);
 
         }catch (ActivityNotFoundException e){
+//            if user don't have google map it will redirect to the google map store
             Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=com.google.android.apps.maps");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
         }
-
     }
 
     private void DisplayTrack(){
+//        ask for permission to get the location
         if (ContextCompat.checkSelfPermission(GalleryActivity.this, Manifest.permission.ACCESS_FINE_LOCATION)
         != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(GalleryActivity.this,new String[]{
@@ -192,6 +190,7 @@ public class GalleryActivity extends AppCompatActivity implements LocationListen
 
 
     @SuppressLint("MissingPermission")
+//    get current location
     private void getLocation(){
         try {
             locationManager = (LocationManager) getApplicationContext().getSystemService(LOCATION_SERVICE);
