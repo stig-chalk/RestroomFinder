@@ -3,6 +3,12 @@ CS125 Project
 
 Group56
 
+ * Yuhui Chen
+
+ * Daolun Shen
+
+ * Runyi Yang
+
 [Frontend Android App](https://github.com/stig-chalk/RestroomFinder/tree/main/CS125)
 
 [Backend Spring Boot Code](https://github.com/stig-chalk/RestroomFinder/tree/main/spring)
