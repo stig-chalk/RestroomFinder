@@ -80,7 +80,7 @@ public class LoginActivity extends AppCompatActivity {
                         try {
                             String success = response.getString("success");
                             if (success.equals("true")){
-                                Intent intent = new Intent(LoginActivity.this, PrefrenceActivity.class);
+                                Intent intent = new Intent(LoginActivity.this, SearchActivity.class);
                                 startActivity(intent);
                             }
                             else{
